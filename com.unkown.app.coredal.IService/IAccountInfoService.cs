@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using com.unkown.app.Models;
+using com.unkown.app.coredal.Models;
 
 namespace com.unkown.app.coredal.IService
 {

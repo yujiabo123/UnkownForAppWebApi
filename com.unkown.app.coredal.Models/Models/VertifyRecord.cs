@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace com.unkown.app.Models
+namespace com.unkown.app.coredal.Models
 {
     public partial class VertifyRecord
     {

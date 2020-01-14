@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace com.unkown.app.Utility
+namespace com.unkown.app.Utility.Result
 {
     public class GlobalJsonResult
     {
