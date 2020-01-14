@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using com.unkown.app.Utility.JWT;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -22,10 +26,18 @@ namespace com.unkown.app.Controllers
             _log.LogInformation("LoginController.......");
         }
         [HttpGet("token")]
-        public string GetToken()
+        public async Task<ActionResult<string>> GetToken(string username, string password)
         {
-            return "112233";
+            return await JwtHandler.CreateJwtToken();
         }
+
+        [HttpGet("{id}")]
+        [Authorize]
+        public async Task<ActionResult<string>> GetValue(int id)
+        {
+            return await Task.Run(() => "This is GetValue!!!---" + id);
+        }
+
         [HttpGet("error")]
         public string GetException()
         {

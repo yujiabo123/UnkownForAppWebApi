@@ -6,11 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace com.unkown.app.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class IndexController : Controller
     {
-        public IActionResult Index()
+
+        public async Task<ActionResult<string>> GetIndex()
         {
-            return View();
+            return await Task.Run(() => "");
+
         }
     }
 }

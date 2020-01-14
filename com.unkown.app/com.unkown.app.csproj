@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +24,7 @@
     <ProjectReference Include="..\com.unkown.app.coredal.Models\com.unkown.app.coredal.Models.csproj" />
     <ProjectReference Include="..\com.unkown.app.coredal.Service\com.unkown.app.coredal.Service.csproj" />
     <ProjectReference Include="..\com.unkown.app.CustomFilter\com.unkown.app.CustomFilter.csproj" />
+    <ProjectReference Include="..\com.unkown.app.Utility\com.unkown.app.Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>
